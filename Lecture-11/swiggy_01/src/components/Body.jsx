@@ -1,7 +1,9 @@
 import React from 'react'
 import RestaurantCard from './RestaurantCard'
+import ApiCalling from './ApiCalling'
 
 function Body() {
+    let restArr = ApiCalling();
   return (
     <div>
         <h1 className='font-bold text-xl m-8'>Restaurants with online food delivery in Chhindwara</h1>
@@ -9,14 +11,7 @@ function Body() {
         <button className='border rounded w-1/12 ml-6'>Reset</button>
 
         <div className='flex flex-wrap w-10/12 m-auto'>
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
+            <RestaurantCard restArr={restArr} />
         </div>
     </div>
   )
