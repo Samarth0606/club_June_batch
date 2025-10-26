@@ -8,6 +8,7 @@ import Signin from './components/Signin.jsx';
 import Body from './components/Body.jsx';
 import Error from './components/Error.jsx';
 import RestaurantDetail from './components/RestaurantDetail.jsx';
+import RealTimeClock from './components/RealTimeClock.jsx';
 
 const appRouter = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const appRouter = createBrowserRouter([
       {
         path:'/restaurant/:id',
         element: <RestaurantDetail />
+      },
+      {
+        path:'/clock',
+        element: <RealTimeClock />
       },
 
     ]
