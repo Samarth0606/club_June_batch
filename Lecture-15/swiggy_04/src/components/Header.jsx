@@ -34,7 +34,7 @@ function Header() {
                 </div>
                 <div className='flex mx-4'>
                     <span className='mt-1'> <IoCart /> </span>
-                    <li className='px-2'>CART-{cartItems.length}</li>
+                    <li className='px-2'><Link to='/cart'>CART-{cartItems.length}</Link></li>
                 </div> 
             </ul>
         </nav>
