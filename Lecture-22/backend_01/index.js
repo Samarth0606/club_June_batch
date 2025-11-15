@@ -3,6 +3,7 @@ const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
 const restaurantRoutes = require('./routes/restaurant.routes')
+const userRoutes = require('./routes/user.routes')
 
 // mongoose.connect('mongodb://127.0.0.1:27017/test') //local link - my machine
 mongoose.connect('mongodb+srv://samarthvohraindia_db_user:56FI1xyyez2DuBr6@cluster0.xwxmmum.mongodb.net/') //cloud link 
@@ -16,6 +17,7 @@ app.get('/' , (req,res)=>{ //ROOT ROUTE
 })
 
 restaurantRoutes(app)
+userRoutes(app)
 
 const PORT = 8000
 app.listen(PORT , ()=>{
